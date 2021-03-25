@@ -752,6 +752,9 @@ std::optional<PeFile> createPeFromObj(const std::vector<ObjectFile>& objFiles, P
 
 
 int main(int argc, char** argv) {
+
+    std::cout << "linking target" << std::endl;
+
     // parse command line arguments
     auto optionsOpt = getProgramOptions(argv[0], std::vector<char*>(argv+1, argv+argc));
     if (!optionsOpt) {
